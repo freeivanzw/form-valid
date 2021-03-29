@@ -2,11 +2,14 @@ $(function(){
     $("#form").submit(function(e){
 
         if ($("#name").val() === "" || $("#name").val() == null) {
-            $("#errorname").text("where is the name?")
+            $("#errorname").text("де імя твоє?");
             e.preventDefault();
         } else if ($("#password").val() === "" || $("#password").val() == null) {
-            $("#errorpass").text("where is the password?")
+            $("#errorname").text("Нуууу, пароль всьо таки тоже потрібно");
             e.preventDefault();
-        }
+        } else if ($("#password").val().length < 6 ) {
+            $("#errorname").text("двавай більше циферок, хотяб 6");
+            e.preventDefault();
+        };
     })
 });
